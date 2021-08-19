@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden;
+}
+a {
+  color: white;
+}
+.monster {
+  height: 95vh;
+  animation: rote 2s 15s forwards, shake 1s 21s, spin 5s linear 25s forwards,
+    jig 1s linear 37s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(360deg) scale(1);
+  }
+  100% {
+    transform: rotate(1440deg) scale(0.2);
+  }
+}
+
+@keyframes jig {
+  0% {
+    transform: rotate(0deg) scale(0.2);
+  }
+
+  50% {
+    transform: rotate(10deg) scale(0.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.2);
+  }
+}
+
+h1 {
+  position: absolute;
+  color: white;
+  right: 0;
+  margin-right: 0.7em;
+  transform: translateY(-100%);
+  animation: text-fall 1s 22.6s forwards;
+  z-index: 10;
+}
+
+h2 {
+  position: absolute;
+  color: white;
+  right: 0;
+  margin-right: 0.7em;
+  margin-top: 2em;
+  transform: translateY(-100em);
+  animation: text-fall-2 1s 31s forwards;
+  z-index: 10;
+}
+
+h3 {
+  position: absolute;
+  color: white;
+  left: 0;
+  bottom: 0;
+  margin-left: 0.7em;
+  margin-bottom: 0.7em;
+  transform: translateY(20em);
+  animation: text-up 1s 31.6s forwards;
+  z-index: 10;
+}
+
+#xmas-hat {
+  transform: translateY(-60%);
+  animation: fall 0.5s 22s forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-40%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-fall {
+  from {
+    transform: translateY(-40%);
+  }
+  to {
+    transform: translateY(35px);
+  }
+}
+
+@keyframes text-fall-2 {
+  from {
+    transform: translateY(-40em);
+  }
+  to {
+    transform: translateY(35px);
+  }
+}
+
+@keyframes text-up {
+  from {
+    transform: translateY(20em);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#monster-body {
+  /* display: none; */
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: zoom 3s, shake 3s 3s;
+}
+
+#hair {
+  transform: scale(0);
+  animation: zoom 1.5s 8s forwards;
+}
+
+/* Face parts */
+
+/* Eye parts */
+#eye {
+  animation: shake 1s 10s;
+}
+
+#inner-eye {
+  /* pupil and colour */
+  animation: eye-eye 3s 32s infinite;
+}
+
+@keyframes eye-eye {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#eye-white {
+  transform: scale(0);
+  animation: zoom 3s 6s forwards;
+}
+#eye-colour {
+  transform: scale(0);
+  animation: zoom 2s 7s forwards;
+}
+#eye-pupil {
+  transform: scale(0);
+  animation: zoom 1.5s 8s forwards;
+}
+
+#nose {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: nosey 4s 11s forwards;
+}
+
+@keyframes nosey {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(4.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#mouth {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.3s 18s forwards;
+}
+
+#top-tooth {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 18.2s forwards;
+}
+#bottom-tooth {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 18.3s forwards;
+}
+
+/* Arms */
+#arm-left-all {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.5s 20s forwards, wave 0.5s 34s infinite;
+}
+
+#arm-right-all {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.5s 20.5s forwards;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  50% {
+    transform: translateY(3px) translateX(1px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Legs */
+#leg-left {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 18.5s forwards;
+}
+
+#leg-right {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 18.7s forwards;
+}
+
+#foot-left {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 18.8s forwards;
+}
+
+#foot-right {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 19s forwards;
+}
+
+#toe-left-1 {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 19.1s forwards;
+}
+#toe-left-2 {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 19.3s forwards;
+}
+
+#toe-left-3 {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 19.4s forwards;
+}
+
+#toe-right-1 {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 19.5s forwards;
+}
+
+#toe-right-2 {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 19.7s forwards;
+}
+
+#toe-right-3 {
+  transform-origin: center;
+  transform: scale(0);
+  transform-box: fill-box;
+  animation: zoom 0.2s 19.8s forwards;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    transform-origin: center;
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes rote {
+  0% {
+    transform: rotate(0deg) scale(0.7);
+  }
+  15% {
+    transform: rotate(90deg) scale(0.7);
+  }
+  30% {
+    transform: rotate(180deg) scale(0.7);
+  }
+  90% {
+    transform: rotate(180deg) scale(0.7);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
